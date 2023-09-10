@@ -11,9 +11,11 @@ def parse_news():
     soup = BeautifulSoup(page.text, 'html.parser')
 
     main_content = soup.find('div', class_='news-index blog-view')
-    news_list = main_content.find('div', class_='list-view').find('div', class_='row').find_all('div',
-                                                                                                class_='col-md-4')
-    for news_box in news_list:
+    row = main_content.find('div', class_='list-view').find('div', class_='row')
+    news_list_key_container = row.find_all('div', recursive=False)
+    news_list = row.find_all('div', class_='col-md-4')
+    for index, news_box in enumerate(news_list):
+        key_data = news_list_key_container[index]['data-key']
         news = news_box.find('article')
         image_wrapper = news.find('div', class_='image-wrapper')
         item_content = news.find('div', class_='item-content')
@@ -36,5 +38,5 @@ def parse_news():
             meta.a.extract()
         date = meta.text.strip()
 
-        ut_news = UtNews(img_src, img_alt, short_title, title, news_detail_url, is_new, brief, category, date)
+        ut_news = UtNews(key_data, img_src, img_alt, short_title, title, news_detail_url, is_new, brief, category, date)
         return ut_news

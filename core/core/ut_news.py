@@ -1,5 +1,6 @@
 class UtNews:
-    def __init__(self, img_src, img_alt, short_title, title, news_detail_url, is_new, brief, category, date):
+    def __init__(self, key_data, img_src, img_alt, short_title, title, news_detail_url, is_new, brief, category, date):
+        self.key_data = key_data
         self.img_src = img_src
         self.img_alt = img_alt
         self.short_title = short_title
@@ -12,6 +13,7 @@ class UtNews:
 
     def to_dict(self):
         return {
+            'key_data': self.key_data,
             'img_src': self.img_src,
             'img_alt': self.img_alt,
             'short_title': self.short_title,
