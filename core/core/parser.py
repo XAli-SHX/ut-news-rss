@@ -9,6 +9,7 @@ def parse_news():
     page = requests.get(url)
 
     soup = BeautifulSoup(page.text, 'html.parser')
+    ut_news_list = []
 
     main_content = soup.find('div', class_='news-index blog-view')
     row = main_content.find('div', class_='list-view').find('div', class_='row')
@@ -39,4 +40,5 @@ def parse_news():
         date = meta.text.strip()
 
         ut_news = UtNews(key_data, img_src, img_alt, short_title, title, news_detail_url, is_new, brief, category, date)
-        return ut_news
+        ut_news_list.append(ut_news.to_dict())
+    return ut_news_list

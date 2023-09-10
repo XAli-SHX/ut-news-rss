@@ -8,5 +8,5 @@ from .ut_news import UtNews
 @api_view(('GET',))
 def news_rss(request):
     return Response({
-        'news': parser.parse_news().to_dict(),
+        'news': parser.parse_news(),
     })
