@@ -4,7 +4,7 @@ A Django application to parse and show the RSS of `University of Tehran (UT)` ne
 This app parses the link bellow to extract news.
 
 ```url
-https://news.ut.ac.ir/fa/news/category/79/%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%DB%8C%D9%87-%D9%87%D8%A7-%D9%88-%D9%81%D8%B1%D8%A7%D8%AE%D9%88%D8%A7%D9%86-%D9%87%D8%A7
+https://news.ut.ac.ir/
 ```
 
 ## Built With
