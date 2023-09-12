@@ -1,4 +1,1 @@
 .idea
-venv
-*.pyc
-core/db.sqlite3
