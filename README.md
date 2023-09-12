@@ -3,9 +3,7 @@
 A Django application to parse and show the RSS of `University of Tehran (UT)` news.
 This app parses the link bellow to extract news.
 
-```url
-https://news.ut.ac.ir/
-```
+[https://news.ut.ac.ir/](https://news.ut.ac.ir/)
 
 ## Built With
 
@@ -35,9 +33,7 @@ This is an example of how you may give instructions on setting up your project l
 
 Now by entering the URL bellow you can access the news:
 
-```url
-http://127.0.0.1:8000/news/
-```
+[http://127.0.0.1:8000/news/](http://127.0.0.1:8000/news/)
 
 ## Usage
 
