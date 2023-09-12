@@ -1,9 +1,13 @@
 # UT News RSS
 
 A Django application to parse and show the RSS of `University of Tehran (UT)` news.
-This app parses the link bellow to extract news.
+This app parses the link below to extract news.
 
 [https://news.ut.ac.ir/](https://news.ut.ac.ir/)
+
+Currently APIs are running in the link below:
+
+[https://utnews.iran.liara.run/news/](https://utnews.iran.liara.run/news/)
 
 ## Built With
 
@@ -31,7 +35,7 @@ This is an example of how you may give instructions on setting up your project l
    python3 manage.py runserver
    ```
 
-Now by entering the URL bellow you can access the news:
+Now by entering the URL below you can access the news:
 
 [http://127.0.0.1:8000/news/](http://127.0.0.1:8000/news/)
 
